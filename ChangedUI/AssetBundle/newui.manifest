@@ -1,0 +1,31 @@
+ManifestFileVersion: 0
+CRC: 3696217835
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4656551e455bb1f6687f7b8b568525a7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ddeeb3cb0b42c9a8df67181163a6a32b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/NewUI/Sprites/Panel_Frame_Mono.png
+- Assets/NewUI/Sprites/Button_Frame_Press_Mono.png
+- Assets/NewUI/Sprites/LineDetailAlt1_Mono.png
+- Assets/NewUI/Sprites/LineDetail_Mono.png
+- Assets/NewUI/Sprites/Button_Frame_Hover_Mono.png
+- Assets/NewUI/Audio/Dark_Fog-David_Fesliyan.mp3
+- Assets/NewUI/Sprites/Button_Frame_Mono.png
+- Assets/NewUI/Sprites/Wide_Mono.png
+- Assets/NewUI/Sprites/CornerDetail_Mono.png
+- Assets/NewUI/Sprites/ButtonHighlighted_Mono.png
+- Assets/NewUI/Sprites/LineDetailAlt2_Mono.png
+Dependencies: []
