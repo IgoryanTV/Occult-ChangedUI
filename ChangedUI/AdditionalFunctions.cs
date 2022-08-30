@@ -11,21 +11,23 @@ namespace ChangedUIMod
     {
         private void AddToDictionaryGameObject(GameObject obj)
         {
-            for (int i = 0; i < obj.transform.childCount; i++)
+            foreach (Transform item in obj.transform)
+            {
+                _uiMenuGameObjects.Add(item.name, item.gameObject);
+            }
+            /*for (int i = 0; i < obj.transform.childCount; i++)
             {
                 _uiMenuGameObjects.Add(obj.transform.GetChild(i).name, obj.transform.GetChild(i).gameObject);
-            }
+            }*/
         }
 
-        private void ChangeCameraPos(GameObject obj)
+        private void DisableWeirdCameraComponent(GameObject obj)
         {
-            obj.transform.position = new Vector3(0f, 1.5f, 1.5f);
-            obj.transform.eulerAngles = new Vector3(0f, 180f, 0f);
+            obj.GetComponent<Donteco.CursorCameraMoving>().gameObject.SetActive(false);
         }
 
         private void ChangeCharacterMenu(GameObject obj)
         {
-            ChangeCameraPos(_cameraObj);
             obj.GetComponent<GridLayoutGroup>().constraintCount = 3;
             obj.GetComponent<GridLayoutGroup>().cellSize = new Vector2(100f, 100f);
             obj.GetComponent<RectTransform>().anchorMax = new Vector2(0.3f,1f);
@@ -34,17 +36,17 @@ namespace ChangedUIMod
             obj.GetComponent<RectTransform>().localPosition = new Vector3(-755f, 550f, 0f);
         }
         
-        private void OnLoad(GameObject menuObj)
+        private void OnLoad(GameObject obj)
         {
-            for (int i = 2; i < menuObj.transform.childCount; i++)
+            for (int i = 2; i < obj.transform.childCount; i++)
             {
-                var button = menuObj.transform.GetChild(i).GetChild(0).GetComponent<Image>();
+                var button = obj.transform.GetChild(i).GetChild(0).GetComponent<Image>();
 
-                button.sprite = _defaultImg;
+                button.sprite = _defaultImg.asset as Sprite;
                 button.color = _colorBtn.Value;
-                menuObj.transform.GetChild(i).GetComponent<Button>().spriteState = _state;
-                menuObj.transform.GetChild(i).GetChild(1).GetComponent<Text>().alignment = TextAnchor.MiddleLeft;
-                menuObj.transform.GetChild(i).GetChild(1).GetComponent<RectTransform>().anchoredPosition = new Vector2(110f, 0f);
+                obj.transform.GetChild(i).GetComponent<Button>().spriteState = _state;
+                obj.transform.GetChild(i).GetChild(1).GetComponent<Text>().alignment = TextAnchor.MiddleLeft;
+                obj.transform.GetChild(i).GetChild(1).GetComponent<RectTransform>().anchoredPosition = new Vector2(110f, 0f);
             }
         }
     }

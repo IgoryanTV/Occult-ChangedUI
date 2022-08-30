@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: MelonInfo(typeof(ChangedUIMod.ChangedUI), "ChangedUI", "1.0.0", "BBadRequest")]
+[assembly: MelonInfo(typeof(ChangedUIMod.ChangedUI), "ChangedUI", "1.0.1", "BBadRequest")]
 [assembly: MelonGame("LLC Renderise", "Occult")]
 
 // Установка значения False для параметра ComVisible делает типы в этой сборке невидимыми
